@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .custom-navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .company-name {
+            margin-left: 20px;
+        }
+
+        .nav-link {
+            color: black;
+        }
+
+        .signup-link {
+            background-color: white;
+            color: blue;
+            border: 1px solid blue;
+            padding: 5px 15px;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        .pricing-heading {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .pricing-text {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .card {
+            margin: 20px;
+        }
+        .features-section {
+            text-align: left;
+            margin-left: 20px; /* Adjust the left margin as needed */
+        }
+        .resources-section{
+            margin-left: -20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <span class="navbar-brand company-name">Company Name</span>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Enterprise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item ml-auto">
+                        <a class="nav-link signup-link" href="#">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="pricing-heading">Pricing</h1>
+        <div class="pricing-text">
+            <p>Quickly build an effective pricing table for your potential customers with this</p>
+            <p>Bootstrap example It's built with default Bootstrap components and utilities</p>
+            <p>with little customization</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Free</h5>
+                        <p class="card-text"><strong>$0 / mo</strong></p>
+                        <p class="card-text">10 users included</p>
+                        <p class="card-text">2GB of storage</p>
+                        <p class="card-text">Email support</p>
+                        <p class="card-text">Help centre access</p>
+                        <a href="#" class="btn btn-primary">Sign up for free</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pro</h5>
+                        <p class="card-text"><strong>$15 / mo</strong></p>
+                        <p class="card-text">20 users included</p>
+                        <p class="card-text">10GB of storage</p>
+                        <p class="card-text">Priority email support</p>
+                        <p class="card-text">Help centre access</p>
+                        <a href="#" class="btn btn-primary">Get started</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Enterprise</h5>
+                        <p class="card-text"><strong>$29 / mo</strong></p>
+                        <p class="card-text">30 users included</p>
+                        <p class="card-text">15GB of storage</p>
+                        <p class="card-text">Phone and email support</p>
+                        <p class="card-text">Help centre access</p>
+                        <a href="#" class="btn btn-primary">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Horizontal black line -->
+        <hr style="border-color: black;">
+        <div class="row">
+            <!-- Features section -->
+            <div class="col-md-4">
+                <div class="features-section my-5">
+                    <h2 style="font-weight: bold;">Features</h2>
+                    <p>Cool stuff</p>
+                    <p>Random feature</p>
+                    <p>Team feature</p>
+                </div>
+            </div>
+
+            <!-- Resources section -->
+            <div class="col-md-4">
+                <div class="resources-section my-5">
+                    <h2 style="font-weight: bold;">Resources</h2>
+                    <p>Resource</p>
+                    <p>Resource name</p>
+                    <p>Another resource</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="resources-section my-5">
+                    <h2 style="font-weight: bold;">About</h2>
+                    <p>Team</p>
+                    <p>Locations</p>
+                    <p>Privacy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

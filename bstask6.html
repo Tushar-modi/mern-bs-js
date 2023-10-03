@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for error messages */
+        .error-text {
+            color: red;
+            font-size: 12px;
+        }
+
+        /* Custom CSS for input boxes with errors */
+        .input-error {
+            border: 1px solid red;
+        }
+
+        /* Custom CSS for the form box */
+        .form-box {
+            background-color: #f2f2f2;
+            padding: 20px;
+            width: 600px; 
+            height: 550px; 
+            margin: 0 auto; 
+        }
+
+        /* Custom CSS for the error icon */
+        .error-icon {
+            position: absolute;
+            right: 10px;
+            top: 12px;
+            color: red;
+            font-size: 18px;
+        }
+
+        /* Custom CSS to reduce input box size */
+        .form-control {
+            height: 50px; /* Adjusted input box height */
+        }
+
+        /* Custom CSS to make the submit button as big as input boxes */
+        .btn-danger {
+            height: 50px; /* Adjusted button height to match input boxes */
+            padding: 5px 15px; /* Adjusted padding for button size */
+            margin-top: 15px; /* Added margin-top to move the button inside the form box */
+            width: 100%; /* Make the button as wide as the form */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="form-box">
+            <form id="myForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                    <div class="error-text" id="name-error"></div>
+                    <span class="error-icon">&#9888;</span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                    <div class="error-text" id="email-error"></div>
+                    <span class="error-icon">&#9888;</span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                    <div class="error-text" id="password-error"></div>
+                    <span class="error-icon">&#9888;</span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="hobbies">Hobbies</label>
+                    <select class="form-control" id="hobbies" name="hobbies">
+                        <option value="reading">Reading</option>
+                        <option value="gaming">Gaming</option>
+                        <option value="cooking">Cooking</option>
+                    </select>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-danger">Submit</button> <!-- Adjusted button size -->
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#myForm").submit(function (event) {
+                var name = $("#name").val();
+                var email = $("#email").val();
+                var password = $("#password").val();
+
+                // Reset previous error messages
+                $(".error-text").text("");
+                $(".form-control").removeClass("input-error");
+
+                // Remove exclamation marks
+                $(".error-icon").remove();
+
+                // Validate Name
+                if (name === "") {
+                    $("#name-error").text("Name is required");
+                    $("#name").addClass("input-error");
+                    $("#name").after('<span class="error-icon">&#9888;</span>');
+                }
+
+                // Validate Email
+                if (email === "") {
+                    $("#email-error").text("Email is required");
+                    $("#email").addClass("input-error");
+                    $("#email").after('<span class="error-icon">&#9888;</span>');
+                }
+
+                // Validate Password
+                if (password === "") {
+                    $("#password-error").text("Password is required");
+                    $("#password").addClass("input-error");
+                    $("#password").after('<span class="error-icon">&#9888;</span>');
+                }
+
+                // Prevent the form from submitting if there are errors
+                if (name === "" || email === "" || password === "") {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication and Division Calculator</title>
+    <link rel="stylesheet" type="text/css" href="calculator.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            text-align: center;
+            border: 2px solid black;
+            padding: 20px;
+            width: 300px; /* Adjust the width to make it more rectangular */
+            height: auto; /* Allow the height to adjust based on content */
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="firstNumber">1st number:</label><br>
+        <input type="number" id="firstNumber"><br><br>
+        
+        <label for="secondNumber">2nd number:</label><br>
+        <input type="number" id="secondNumber"><br><br>
+
+        <button type="button" id="multiplyButton">Multiply</button>
+        <button type="button" id="divideButton">Divide</button><br><br>
+
+        <p id="resultMessage">The Result Is:</p>
+        <p id="resultValue"></p>
+    </form>
+
+    <script src="javascript3.js"></script>
+</body>
+</html>

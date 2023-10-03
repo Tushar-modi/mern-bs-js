@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .form-container {
+            border: 2px solid black;
+            background-color: #ccc;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .custom-button {
+            background-color: orange;
+            color: white;
+        }
+
+        .error-message {
+            color: red;
+        }
+        .error-label {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 form-container">
+                <form id="myForm">
+                    <div class="form-group">
+                        <i class="fa fa-user icon"></i>
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" id="firstName" required>
+                        <div id="firstNameError" class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-user icon"></i>
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" required>
+                        <div id="lastNameError" class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-envelope icon"></i>
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                        <div id="emailError" class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-phone icon"></i>
+                        <label for="phone">Phone#</label>
+                        <input type="tel" class="form-control" id="phone" required>
+                        <div id="phoneError" class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-home icon"></i>
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" id="address" required>
+                        <div id="addressError" class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-building icon"></i>
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" id="city" required>
+                        <div id="cityError" class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-map-marker icon"></i>
+                        <label for="state">State</label>
+                        <select class="form-control" id="state" required>
+                            <option value="" disabled selected>Select State</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <!-- Add more Indian cities as needed -->
+                        </select>
+                        <div id="stateError" class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-question icon"></i>
+                        <label>Do you have Hosting?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="hostingOption" id="yes" value="Yes" required>
+                            <label class="form-check-label" for="yes">Yes</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="hostingOption" id="no" value="No" required>
+                            <label class="form-check-label" for="no">No</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-pencil icon"></i>
+                        <label for="projectDescription">Project Description</label>
+                        <textarea class="form-control" id="projectDescription" rows="3" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="button" class="btn custom-button" onclick="validateForm()">
+                            <i class="fa fa-paper-plane"></i> Send
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var address = document.getElementById("address").value;
+            var city = document.getElementById("city").value;
+            var state = document.getElementById("state").value;
+
+            var firstNameError = document.getElementById("firstNameError");
+            var lastNameError = document.getElementById("lastNameError");
+            var emailError = document.getElementById("emailError");
+            var phoneError = document.getElementById("phoneError");
+            var addressError = document.getElementById("addressError");
+            var cityError = document.getElementById("cityError");
+            var stateError = document.getElementById("stateError");
+
+            firstNameError.innerHTML = "";
+            lastNameError.innerHTML = "";
+            emailError.innerHTML = "";
+            phoneError.innerHTML = "";
+            addressError.innerHTML = "";
+            cityError.innerHTML = "";
+            stateError.innerHTML = "";
+
+            var isValid = true;
+
+            if (!firstName) {
+                firstNameError.innerHTML = "Please supply your first name";
+                isValid = false;
+            }
+
+            if (!lastName) {
+                lastNameError.innerHTML = "Please supply your last name";
+                isValid = false;
+            }
+
+            if (!email) {
+                emailError.innerHTML = "Please supply your email address";
+                isValid = false;
+            }
+
+            if (!phone) {
+                phoneError.innerHTML = "Please supply your phone number";
+                isValid = false;
+            }
+
+            if (!address) {
+                addressError.innerHTML = "Please supply your street address";
+                isValid = false;
+            }
+
+            if (!city) {
+                cityError.innerHTML = "Please supply your city";
+                isValid = false;
+            }
+
+            if (state === "") {
+                stateError.innerHTML = "Please select your state";
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Submit the form if all fields are filled
+                document.getElementById("myForm").submit();
+            }
+        }
+        function highlightErrorFields() {
+            var inputFields = document.querySelectorAll('.form-control');
+            var icons = document.querySelectorAll('.icon');
+            var labels = document.querySelectorAll('.form-group label');
+
+            inputFields.forEach(function (element) {
+                element.style.borderColor = 'red';
+            });
+
+            icons.forEach(function (icon) {
+                icon.style.color = 'red';
+            });
+
+            labels.forEach(function (label) {
+                label.classList.add('error-label');
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #fafafa;
+}
+
+.login-container {
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    font-family: italic;
+}
+
+.instagram-logo {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+}
+
+.login-button {
+    background-color: #1877f2;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-left: -5px;
+}
+
+.remember-me-label {
+    margin-left: 5px;
+}
+
+.forgot-password {
+    color: #1877f2;
+    text-decoration: none;
+    float: right;
+    margin-top: 10px;
+}
+
+.signup-link {
+    color: #1877f2;
+    margin-top: 20px;
+}
+.signup {
+    color: black;
+    margin-top: 20px;
+}
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="instagram-logo">Instagram</div>
+        <div class="input-field">
+            <span class="fa fa-user person-icon"></span>
+            <input type="text" placeholder="Username" id="username">
+        </div>
+        <div class="input-field">
+            <span class="fa fa-lock lock-icon"></span>
+            <input type="password" placeholder="Password" id="password">
+        </div>
+        <button class="login-button" onclick="login()">Log in</button>
+        <div class="remember-me">
+            <input type="checkbox" id="remember-me">
+            <label class="remember-me-label" for="remember-me">Remember me</label>
+        </div>
+        <a href="#" class="forgot-password">Forgot Password?</a>
+        <div class="signup">Don't have an account! <a href="#" class="signup-link">Sign up here</a></div>
+    </div>
+    <script src="javascript6.js"></script>
+</body>
+</html>

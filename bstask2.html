@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builderz Homepage</title>
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <style>
+        .header-container {
+            background-color: yellow;
+            padding: 80px 20px 20px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .company-name {
+            font-weight: 800;
+            margin-bottom: 20px;
+            padding-right: 340px;
+        }
+
+        .opening-hours,
+        .contact-info,
+        .email-info {
+            text-align: center;
+        }
+
+        .hours-text,
+        .contact-text,
+        .email-text {
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        .icon {
+            margin-right: 10px;
+        }
+
+        .navbar {
+            background-color: black;
+            height: 60px;
+            width: 75%;
+            z-index: 1000;
+            padding: 0;
+            margin-left: 185px;
+            margin-right: 20px;
+        }
+
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 100%;
+            margin: 0 20px;
+            height: 100%;
+        }
+
+        .navbar a {
+            color: white;
+            margin: 0 10px;
+            white-space: nowrap;
+        }
+
+        .navbar a:hover {
+            color: yellow;
+        }
+
+        .navbar button {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+
+        .hero-section {
+            background-image: url('download.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-left: 180px;
+            margin-right: 300px;
+            width: 1100px;
+        }
+        .hero-section h2 {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .hero-section button {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: bold;
+            width: 50%;
+            align-self: center;
+        
+        }
+        .features-container {
+            display: flex;
+            align-items: flex-start; /* Align with the top of the image */
+            margin-left: 180px;
+            margin-right: 190px;
+        }
+
+        .feature {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .black-bg {
+            background-color: black;
+            color: yellow;
+        }
+
+        .yellow-bg {
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+</head>
+
+<body style="background-color: lightgray;">
+    <div class="container header-container">
+        <div class="row">
+            <div class="col-md-3">
+                <h1 class="company-name">Builderz</h1>
+            </div>
+            <div class="col-md-3 opening-hours">
+                <i class="far fa-calendar-alt fa-2x icon"></i>
+                <i class="far fa-clock fa-2x icon"></i>
+                <p class="hours-text">Opening Hours<br>Mon-Fri, 8:00 - 9:00</p>
+            </div>
+            <div class="col-md-3 contact-info">
+                <i class="fas fa-user fa-2x icon"></i>
+                <i class="fas fa-phone fa-2x icon"></i>
+                <p class="contact-text">Contact Us<br>+012 345 6789</p>
+            </div>
+            <div class="col-md-3 email-info">
+                <i class="far fa-envelope fa-2x icon"></i>
+                <p class="email-text">Email Us<br>info@example.in</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div class="container navbar-content">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Service</a>
+            <a href="#">Team</a>
+            <a href="#">Project</a>
+            <a href="#">Pages</a>
+            <a href="#">Contact</a>
+            <button>Get a Quote</button>
+        </div>
+    </div>
+
+    <div class="hero-section">
+        <h2>We are professional</h2>
+        <h1>For your Dream Project</h1>
+        <button style="font-weight: bold;">Get a Quote</button>
+    </div>
+    <div class="features-container">
+        <div class="feature black-bg">
+            <i class="fas fa-hard-hat fa-3x"></i>
+            <p>Expert Worker</p>
+        </div>
+        <div class="feature yellow-bg">
+            <i class="fas fa-building fa-3x"></i>
+            <p>Quality Work</p>
+        </div>
+        <div class="feature black-bg">
+            <i class="fas fa-wrench fa-3x"></i>
+            <p>Skilled Craftsmanship</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js (Optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS (Optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"></script>
+</body>
+
+</html>
